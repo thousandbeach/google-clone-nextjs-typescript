@@ -1,3 +1,4 @@
+import { SearchIcon, MicrophoneIcon } from '@heroicons/react/solid';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -17,6 +18,25 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
+
+      <form className='flex flex-col items-center mt-40'>
+        <Image
+          width='300'
+          objectFit='cover'
+          height='100'
+          src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2880px-Google_2015_logo.svg.png'
+          alt='google-logo'
+        ></Image>
+        <div className='flex items-center py-3 px-5 mx-auto mt-5 w-full max-w-[90%] rounded-full border border-gray-200 focus-within:shadow-lg hover:shadow-lg sm:max-w-xl lg:max-w-2xl'>
+          <SearchIcon className='mr-3 h-5 text-gray-500' />
+          <input type='text' className='grow focus:outline-none' />
+          <MicrophoneIcon className='h-5 text-gray-500' />
+        </div>
+        <div className='flex flex-col justify-center mt-8 space-y-2 w-[50%] sm:flex-row sm:space-y-0 sm:space-x-4'>
+          <button className='btn'>Google Search</button>
+          <button className='btn'>I'm Feeling Lucky</button>
+        </div>
+      </form>
 
       {/*<main className={styles.main}>*/}
       {/*  <h1 className='pt-3 font-bold text-red-200'>*/}
