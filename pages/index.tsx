@@ -2,6 +2,7 @@ import { SearchIcon, MicrophoneIcon } from '@heroicons/react/solid';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import styles from '../styles/Home.module.css';
 
@@ -37,6 +38,8 @@ const Home: NextPage = () => {
           <button className='btn'>I'm Feeling Lucky</button>
         </div>
       </form>
+
+      <Footer />
 
       {/*<main className={styles.main}>*/}
       {/*  <h1 className='pt-3 font-bold text-red-200'>*/}
